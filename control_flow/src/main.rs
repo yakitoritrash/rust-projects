@@ -68,15 +68,29 @@
 //        println!("LIFTOFF!!");
 //    }
 
+//    fn main() {
+//        let mut number = 3;
+//        loop {
+//            if number == 0 {
+//                break;
+//            } else {
+//                println!("{number}");
+//                number -= 1;
+//            }
+//        }
+//        println!("LIFTOFF!!");
+//    }
+
+//    fn main() {
+//        let a = [10, 20, 30, 40, 50];
+//        for element in a {
+//            println!("the value is {}", element);
+//        }
+//    }
+
 fn main() {
-    let mut number = 3;
-    loop {
-        if number == 0 {
-            break;
-        } else {
-            println!("{number}");
-            number -= 1;
-        }
+    for number in (1..4).rev() {
+        println!("{number}");
     }
-    println!("LIFTOFF!!");
+    println!("LIFTOFF");
 }
