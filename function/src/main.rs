@@ -8,9 +8,20 @@ fn another_function(x: i32, unit_label: char) {
 }
 
 fn main() {
+    let x = five();
     let y = {
         let x = 6;
-        x
+        x + 1
     };
+    let x = plus_one(x);
     println!("value of y: {y}");
+    println!("value of x: {x}");
+}
+
+fn five() -> i32 {
+    5
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1
 }
