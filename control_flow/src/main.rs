@@ -58,12 +58,25 @@
 //        println!("End count = {count}");
 //    }
 
+//    fn main() {
+//        let mut number = 3;
+//        
+//        while number != 0 {
+//            println!("{number}");
+//            number -= 1;
+//        }
+//        println!("LIFTOFF!!");
+//    }
+
 fn main() {
     let mut number = 3;
-    
-    while number != 0 {
-        println!("{number}");
-        number -= 1;
+    loop {
+        if number == 0 {
+            break;
+        } else {
+            println!("{number}");
+            number -= 1;
+        }
     }
     println!("LIFTOFF!!");
 }
