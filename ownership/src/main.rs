@@ -7,14 +7,17 @@ fn main() {
 //    s1 = String::from("ahoy");
 //    println!("{s1} {s2}");
 
-    let mut s = String::from("gello");
-    s = string_func(s);
-    println!("{s}");
-    let x : i32 = 5;
-    int_func(x);
-    let s2 = String::from("hello");
-    let len = calculate_length(&s2);
-    println!("{s2} {len}");
+//    let mut s = String::from("gello");
+//    s = string_func(s);
+//    println!("{s}");
+//    let x : i32 = 5;
+//    int_func(x);
+//    let s2 = String::from("hello");
+//    let len = calculate_length(&s2);
+//    println!("{s2} {len}");
+
+    let s = String::from("hello");
+    change(&s);
 }
 
 fn string_func(some_string: String) ->String {
@@ -28,4 +31,8 @@ fn int_func(some_integer: i32) {
 
 fn calculate_length(s: &String) -> usize {
     s.len()
+}
+
+fn change(some_string: &String) {
+    some_string.push_str(", world!");
 }
