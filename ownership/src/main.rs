@@ -16,23 +16,27 @@ fn main() {
 //    let len = calculate_length(&s2);
 //    println!("{s2} {len}");
 
-    let s = String::from("hello");
-    change(&s);
+    let mut s = String::from("hello");
+    //change(&mut s);
+    let r1 = &mut s;
+    let r2 = &mut s;
+    println!("{r1} {r2}");
 }
 
-fn string_func(some_string: String) ->String {
-    println!("{some_string}");
-    some_string
-}
+//    fn string_func(some_string: String) ->String {
+//        println!("{some_string}");
+//        some_string
+//    }
+//
+//    fn int_func(some_integer: i32) {
+//        println!("{some_integer}");
+//    }
+//
+//    fn calculate_length(s: &String) -> usize {
+//        s.len()
+//    }
 
-fn int_func(some_integer: i32) {
-    println!("{some_integer}");
-}
-
-fn calculate_length(s: &String) -> usize {
-    s.len()
-}
-
-fn change(some_string: &String) {
-    some_string.push_str(", world!");
-}
+//    fn change(some_string: &mut String) {
+//        some_string.push_str(", world!");
+//        println!("{some_string}");
+//    }
