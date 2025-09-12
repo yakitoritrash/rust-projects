@@ -27,7 +27,12 @@ fn main() {
 //    let r3 = &mut s;
 //    println!("{r3}");
 
-    let reference_to_nothing = no_dangle();
+    //let reference_to_nothing = no_dangle();
+
+    let mut s = String::from("hello world");
+    let word = first_word(&s);
+    s.clear();
+
 }
 
 //fn dangle() -> &String {
@@ -35,10 +40,22 @@ fn main() {
  //   &s
 //}
 
-fn no_dangle() -> String {
-    let s = String::from("hello");
-    s
+//    fn no_dangle() -> String {
+//        let s = String::from("hello");
+//        s
+//    }
+
+fn first_word(s: &String) -> usize {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' '{
+            return i;
+        }
+    }
+    s.len()
 }
+
 //    fn string_func(some_string: String) ->String {
 //        println!("{some_string}");
 //        some_string
