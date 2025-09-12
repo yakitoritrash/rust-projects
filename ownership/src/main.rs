@@ -16,15 +16,29 @@ fn main() {
 //    let len = calculate_length(&s2);
 //    println!("{s2} {len}");
 
-    let mut s = String::from("hello");
-    //change(&mut s);
-    {
-        let r1 = &mut s;
-    }
-    let r2 = &mut s;
-    println!("{r1} {r2}");
+//    let mut s = String::from("hello");
+//    //change(&mut s);
+//    //{
+//        //let r1 = &mut s;
+//    //}
+//    let r1 = &s;
+//    let r2 = &s;
+//    println!("{r1} {r2}");
+//    let r3 = &mut s;
+//    println!("{r3}");
+
+    let reference_to_nothing = no_dangle();
 }
 
+//fn dangle() -> &String {
+//    let s = String::from("hello");
+ //   &s
+//}
+
+fn no_dangle() -> String {
+    let s = String::from("hello");
+    s
+}
 //    fn string_func(some_string: String) ->String {
 //        println!("{some_string}");
 //        some_string
